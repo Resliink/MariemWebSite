@@ -1,0 +1,344 @@
+/* Global Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin-left: 15%; /* Adjust the margin for better layout */
+    margin-right: 20%;
+    background-color: rgba(255, 166, 0, 0.233);
+}
+.gif-background{
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.sidebar {
+    position: fixed;
+    z-index: 9999;
+    width: 15%;
+    left: 10%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: left 0.3s ease;
+    background-color: #fff; /* Add background color to main content */
+    border-radius: 10px; /* Add border radius for a softer look */
+    box-shadow: 0 0 10px rgba(113, 76, 9, 0.889);
+    gap: 40px;
+}
+
+.Logo {
+    font-size: 30px;
+    color: rgb(255, 166, 0);
+    text-align: center;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 20px; /* Reduce the gap between list items */
+    padding-top: 20px; /* Adjust padding top for spacing */
+    align-self: flex-start; /* Align list at the start of the sidebar */
+    height: 100%;
+    gap: 80px;
+    width: 100%;
+    cursor: pointer; 
+}
+
+
+
+.list li {
+    list-style: none;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden; /* Hide overflowing anchor content */
+}
+
+.list a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 5px;
+}
+
+.list li:hover {
+    background-color: rgb(255, 166, 0);
+    box-shadow: 0 0 10px rgba(113, 76, 9, 0.889);
+    transition: transform 0.3s ease;
+    transform: scale(1.1); /* Scale up image on hover */
+}
+
+
+.maincontent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff; /* Add background color to main content */
+    border-radius: 10px; /* Add border radius for a softer look */
+    box-shadow: 0 0 10px rgba(113, 76, 9, 0.889);
+    gap : 20px
+}
+
+.header {
+    width: 100%;
+    padding: 10px 0; /* Adjust padding for better spacing */
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+#ArtLogo{
+    font-size: 50px;
+    font-weight: bold;
+}
+.image{
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.image img {
+    width: 100%;
+    height: auto; /* Ensure aspect ratio is maintained */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(113, 76, 9, 0.889);
+    object-fit: cover;
+    padding: 10px;
+}
+.about-me {
+    background-color: white;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    height: 500px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(113, 76, 9, 0.889);
+}
+
+.about-me h1 {
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+    color: black;
+    text-align: center;
+    margin-bottom: 20px; 
+}
+i{
+    font-style: italic;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    box-sizing: inherit;
+    margin-bottom: 15px;
+}
+.about-me p {
+    box-sizing: border-box; 
+    max-width: 800px; 
+    font-size: 20px;
+    color: black;
+    text-align: justify;
+    font-family: "Lato", sans-serif;
+}
+
+.Arts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center align items */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(113, 76, 9, 0.889);
+    
+}
+.items {
+    width: 100%;
+    margin-top: 15px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.5;
+    
+}
+.items p{
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: 400;
+    font-size: 4rem;
+    color: black;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.Arts .art-item {
+    padding: 20px; /* Add padding for spacing */
+    border-radius: 10px; /* Add border radius for a softer look */
+    transition: transform 0.3s ease; /* Add transition for smooth scaling */
+    overflow: hidden; /* Hide overflow content when scaled */
+}
+
+.Arts .art-item:hover {
+    transform: scale(1.5); /* Scale up the div on hover */
+}
+
+.Arts img {
+    height: 200px;
+    width: auto; /* Allow image width to adjust based on height */
+    margin: 10px; /* Adjust margin for better spacing */
+    border-radius: 5px; /* Add border radius for a softer look */
+}
+
+.art-item p{
+    text-align: center;
+}
+.Contact {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+}
+.contact-info {
+    text-align: center;
+}
+.contact-details-form-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 50%;
+    padding: 0 20px;
+    
+}
+.Contact {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(113, 76, 9, 0.889);
+}
+
+.contact-info {
+    text-align: center;
+}
+
+.contact-details-form-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.Contact-details {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.Contact-details p {
+    margin-top: 10px;
+}
+
+#contactForm {
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Contact h2 {
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+    color: black;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.Contact i {
+    color: gray;
+}
+input,
+textarea {
+    margin: 5px 0;
+    width: 100%;
+    padding: 10px;
+}
+#message{
+    margin: 5px 0;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+}
+button {
+    background-color: black;
+    color: white;
+    padding: 10px 50px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    align-self: flex-end;
+}
+
+button:hover {
+    background-color: grey;
+}
+.Contact-details p i {
+     
+    font-size: 24px; 
+}
+.social-footer {
+    padding: 20px; 
+    text-align: center;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(113, 76, 9, 0.889);
+}
+
+.social-footer a {
+    font-size: 24px; /* Set icon size */
+    margin: 0 15px; /* Add margin between icons */
+    color: black;
+    text-decoration: none;
+    
+}
+.social-footer a i:hover{
+    transition: transform 0.3s ease;
+    transform: scale(1.5); /* Scale up image on hover */
+}
+.social-footer a i {
+    font-size: 1.9em; /* Adjust the size as needed */
+}
+
+
